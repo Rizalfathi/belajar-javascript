@@ -7,4 +7,9 @@ var toFloat = parseFloat(y);
 function jumlah(a, b){
     return a + b;
 }
-alert(jumlah(5, 20))
+
+var kurang = function (a, b){
+    return a - b;
+}
+// alert(jumlah(5, 20));
+alert(kurang(25, 5));
