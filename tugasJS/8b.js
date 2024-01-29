@@ -9,11 +9,12 @@ var menuMakanan = {
   var menuText = "Daftar Menu Warteg:\n";
   for (var menu in menuMakanan) {
     menuText += menu + " - Rp" + menuMakanan[menu] + "\n";
+    
   }
   alert(menuText);
   
   
-  var pilihanMenu = prompt("Masukkan menu yang ingin dipesan:");
+  var pilihanMenu = prompt(menuText + "Masukkan menu yang ingin dipesan:");
   var jumlahMakanan = parseInt(prompt("Masukkan jumlah " + pilihanMenu + " yang ingin dipesan:"));
   
   
