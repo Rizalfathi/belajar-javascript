@@ -17,5 +17,8 @@ if (pilihanUser === "") {
   pemenang = "komputer";
   }
 }
-
-alert("Hasil Permainan: \nPemain memilih: " + pilihanUser + "\nKomputer memilih: " + pilihanKomputer + "\nPemenang: " + pemenang);
+if (pemenang === undefined) {
+    alert ("Ulang lagi ah")
+} else {
+    alert("Hasil Permainan: \nPemain memilih: " + pilihanUser + "\nKomputer memilih: " + pilihanKomputer + "\nPemenang: " + pemenang);
+}
