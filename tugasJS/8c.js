@@ -3,7 +3,7 @@ var pilihanUser = prompt("Pilih salah satu: gajah, semut, orang: ");
 var pilihanKomputer = pilihanSuit[Math.floor(Math.random() * 3)];
 var pemenang;
 if (pilihanUser === "") {
-  alert("Mohon isi dengan benar");
+  alert("Isi yang bener atuh SIRR");
 } else if (pilihanUser !== "gajah" && pilihanUser !== "semut" && pilihanUser !== "orang") {
   alert("Isi yang bener atuh SIRR");
 } else {
