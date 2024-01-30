@@ -1,24 +1,31 @@
-var pilihanSuit = ["gajah", "semut", "orang"];
-var pilihanUser = prompt("Pilih salah satu: gajah, semut, orang: ");
-var pilihanKomputer = pilihanSuit[Math.floor(Math.random() * 3)];
-var pemenang;
-if (pilihanUser === "") {
-  alert("Isi yang bener atuh SIRR");
-} else if (pilihanUser !== "gajah" && pilihanUser !== "semut" && pilihanUser !== "orang") {
-  alert("Isi yang bener atuh SIRR");
+var pilihanUser = prompt("Apakah kamu gajah, orang, atau semut?");
+var pilihanComputer = Math.random();
+
+if (pilihanComputer < 0.34) {
+    pilihanComputer = "gajah";
+} else if (pilihanComputer <= 0.67) {
+    pilihanComputer = "orang";
 } else {
-  if (pilihanUser == pilihanKomputer) {
-  pemenang = "seri";
-  } else if (pilihanUser == "gajah" && pilihanKomputer == "semut") {
-  pemenang = "pemain";
-  } else if (pilihanUser == "semut" && pilihanKomputer == "orang") {
-  pemenang = "pemain";
-  } else {
-  pemenang = "komputer";
-  }
+    pilihanComputer = "semut";
 }
-if (pemenang === undefined) {
-    alert ("Ulang lagi ah")
+
+function bandingkanPilihan(user, computer) {
+    if (user === computer) {
+        return "Hasilnya seri";
+    } else if (
+        (user === "gajah" && computer === "orang") ||
+        (user === "orang" && computer === "semut") ||
+        (user === "semut" && computer === "gajah")
+    ) {
+        return "Kamu menang!";
+    } else {
+        return "Komputer menang!";
+    }
+}
+
+if (pilihanUser === "gajah" || pilihanUser === "orang" || pilihanUser === "semut") {
+    var hasil = bandingkanPilihan(pilihanUser, pilihanComputer);
+    alert("Kamu memilih: " + pilihanUser + "\nKomputer memilih: " + pilihanComputer + "\n\n" + hasil);
 } else {
-    alert("Hasil Permainan: \nPemain memilih: " + pilihanUser + "\nKomputer memilih: " + pilihanKomputer + "\nPemenang: " + pemenang);
+    alert("Pilih yang bener atuh");
 }
